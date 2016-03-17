@@ -7,40 +7,35 @@ using System.Linq;
 namespace BGChanger_Server.ViewModels.Backgrounds
 {
     public class Url {
-        public static string[] VALID_EXTENSIONS = {"jpg", "jpeg", "png", "bmp"};
+        public static string[] ValidExtensions = {"jpg", "jpeg", "png", "bmp"};
         
-        private string _url;
+        private readonly string _url;
         
         public Url(string url) {
             _url = url;
+            
+            ProcessUrl().Wait();
         }
         
-        public bool IsValid {
-            get {
-                return VALID_EXTENSIONS.Any(_url.Contains);
-            }
-        }
-        
+        public bool IsValid => ValidExtensions.Any(_url.Contains);
+
         public string ContentType { get; set; }
         
-        public Stream Stream {
-            get {
-                return GetStream().Result;
-            }
-        }
+        public Stream Stream { get; set; }
         
-        private async Task<Stream> GetStream() {
+        private async Task ProcessUrl() {
             var httpClientHandler = new HttpClientHandler();
             using (var client = new HttpClient(httpClientHandler)) {
+                // Retrieve the URL
                 var result = await client.GetAsync(_url);
                 if (!result.IsSuccessStatusCode) {
                     var resultStr = await result.Content.ReadAsStringAsync();
                     throw new Exception("Couldn't get image from URL: " + resultStr);
                 }
                 
-                ContentType = result.Headers.GetValues("Content-Type").FirstOrDefault();
-                
-                return await result.Content.ReadAsStreamAsync();
+                // Fill in the properties needed
+                ContentType = result.Content.Headers.ContentType.MediaType;
+                Stream = await result.Content.ReadAsStreamAsync();
             }
         }
     }

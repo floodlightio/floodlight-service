@@ -19,14 +19,13 @@ namespace BGChanger_Server.Models
         [MaxLength(100)]
         public string ContentType { get; set; }
         
-        public int Height { get; set; }
-        
-        public int Width { get; set; }
-        
         public ApplicationUser User { get; set; }
         
         public Stream FileStream {
             get {
+                // TODO: Need to rewrite this whole thing to take into account that URLs get contenttype directly
+                // Also need to figure out how to do that for files
+
                 if (File != null) {
                     return File.OpenReadStream();
                 } else if (Url != null) {
@@ -57,11 +56,9 @@ namespace BGChanger_Server.Models
         
         public Background ToViewModel() {
             return new Background() {
+                Id = Id.ToString(),
                 Title = Title,
-                ContentType = ContentType,
-                Height = Height,
-                Width = Width,
-                FileStream = FileStream
+                ContentType = ContentType
             };
         }
     }
