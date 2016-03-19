@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
-namespace BGChanger_Server.Controllers
+namespace Floodlight.Service.Controllers
 {
     public class HomeController : Controller
     {

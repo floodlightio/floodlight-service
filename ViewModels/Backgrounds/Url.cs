@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Linq;
 
-namespace BGChanger_Server.ViewModels.Backgrounds
+namespace Floodlight.Service.ViewModels.Backgrounds
 {
     public class Url {
         public static string[] ValidExtensions = {"jpg", "jpeg", "png", "bmp"};

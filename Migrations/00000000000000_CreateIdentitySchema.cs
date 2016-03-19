@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
 
-namespace BGChanger_Server.Migrations
+namespace Floodlight.Service.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

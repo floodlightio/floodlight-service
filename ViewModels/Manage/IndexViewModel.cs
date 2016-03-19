@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 
-namespace BGChanger_Server.ViewModels.Manage
+namespace Floodlight.Service.ViewModels.Manage
 {
     public class IndexViewModel
     {

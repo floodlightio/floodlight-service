@@ -10,10 +10,10 @@ using Microsoft.Extensions.PlatformAbstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using BGChanger_Server.Models;
-using BGChanger_Server.Services;
+using Floodlight.Service.Models;
+using Floodlight.Service.Services;
 
-namespace BGChanger_Server
+namespace Floodlight.Service
 {
     public class Startup
     {
@@ -32,7 +32,7 @@ namespace BGChanger_Server
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
-            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/BGChanger_Server.db";
+            Configuration["Data:DefaultConnection:ConnectionString"] = $@"Data Source={appEnv.ApplicationBasePath}/Floodlight.Service.db";
 
         }
 

@@ -3,9 +3,9 @@ using Microsoft.AspNet.Http;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System;
-using BGChanger_Server.ViewModels.Backgrounds;
+using Floodlight.Service.ViewModels.Backgrounds;
 
-namespace BGChanger_Server.Models
+namespace Floodlight.Service.Models
 {
     public class DbBackground
     {

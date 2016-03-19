@@ -1,11 +1,11 @@
 {
   "version": "1.0.0-*",
-  "userSecretsId": "aspnet5-BGChanger_Server-6a49eb44-3250-4f19-9ed7-3b8df96ebe18",
+  "userSecretsId": "aspnet5-Floodlight.Service-6a49eb44-3250-4f19-9ed7-3b8df96ebe18",
   "compilationOptions": {
     "emitEntryPoint": true
   },
   "tooling": {
-    "defaultNamespace": "BGChanger_Server"
+    "defaultNamespace": "Floodlight.Service"
   },
 
   "dependencies": {

@@ -1,6 +1,6 @@
 using System.IO;
 
-namespace BGChanger_Server.ViewModels.Backgrounds
+namespace Floodlight.Service.ViewModels.Backgrounds
 {
     public class Background
     {

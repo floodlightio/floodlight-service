@@ -6,9 +6,9 @@ using Microsoft.Data.Entity;
 using Microsoft.Data.Entity.Infrastructure;
 using Microsoft.Data.Entity.Metadata;
 using Microsoft.Data.Entity.Migrations;
-using BGChanger_Server.Models;
+using Floodlight.Service.Models;
 
-namespace BGChanger_Server.Migrations
+namespace Floodlight.Service.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]
@@ -99,7 +99,7 @@ namespace BGChanger_Server.Migrations
                     b.HasAnnotation("Relational:TableName", "AspNetUserRoles");
                 });
 
-            modelBuilder.Entity("BGChanger_Server.Models.ApplicationUser", b =>
+            modelBuilder.Entity("Floodlight.Service.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id");
 
@@ -156,14 +156,14 @@ namespace BGChanger_Server.Migrations
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("BGChanger_Server.Models.ApplicationUser")
+                    b.HasOne("Floodlight.Service.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNet.Identity.EntityFramework.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("BGChanger_Server.Models.ApplicationUser")
+                    b.HasOne("Floodlight.Service.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });
@@ -174,7 +174,7 @@ namespace BGChanger_Server.Migrations
                         .WithMany()
                         .HasForeignKey("RoleId");
 
-                    b.HasOne("BGChanger_Server.Models.ApplicationUser")
+                    b.HasOne("Floodlight.Service.Models.ApplicationUser")
                         .WithMany()
                         .HasForeignKey("UserId");
                 });

@@ -7,11 +7,11 @@ using Microsoft.AspNet.Authorization;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Logging;
-using BGChanger_Server.Models;
-using BGChanger_Server.Services;
-using BGChanger_Server.ViewModels.Manage;
+using Floodlight.Service.Models;
+using Floodlight.Service.Services;
+using Floodlight.Service.ViewModels.Manage;
 
-namespace BGChanger_Server.Controllers
+namespace Floodlight.Service.Controllers
 {
     [Authorize]
     public class ManageController : Controller

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc.Rendering;
 
-namespace BGChanger_Server.ViewModels.Account
+namespace Floodlight.Service.ViewModels.Account
 {
     public class SendCodeViewModel
     {

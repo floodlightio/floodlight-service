@@ -9,11 +9,11 @@ using Microsoft.AspNet.Mvc;
 using Microsoft.AspNet.Mvc.Rendering;
 using Microsoft.Data.Entity;
 using Microsoft.Extensions.Logging;
-using BGChanger_Server.Models;
-using BGChanger_Server.Services;
-using BGChanger_Server.ViewModels.Account;
+using Floodlight.Service.Models;
+using Floodlight.Service.Services;
+using Floodlight.Service.ViewModels.Account;
 
-namespace BGChanger_Server.Controllers
+namespace Floodlight.Service.Controllers
 {
     [Authorize]
     public class AccountController : Controller

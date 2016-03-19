@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using BGChanger_Server.ViewModels.Backgrounds;
+using Floodlight.Service.ViewModels.Backgrounds;
 using Microsoft.AspNet.Mvc;
 using System.Linq;
-using BGChanger_Server.Models;
+using Floodlight.Service.Models;
 using Microsoft.AspNet.Http.Extensions;
 
-namespace BGChanger_Server.Controllers {
+namespace Floodlight.Service.Controllers {
     [Route("api")]
     public class ApiController : Controller {
         // For Testing Purposes Only

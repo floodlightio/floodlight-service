@@ -1,5 +1,5 @@
 {
-  "name": "BGChanger_Server",
+  "name": "Floodlight.Service",
   "private": true,
   "dependencies": {
     "bootstrap": "3.3.5",

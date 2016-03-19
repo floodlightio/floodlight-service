@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Http.Authentication;
 using Microsoft.AspNet.Identity;
 
-namespace BGChanger_Server.ViewModels.Manage
+namespace Floodlight.Service.ViewModels.Manage
 {
     public class ManageLoginsViewModel
     {
