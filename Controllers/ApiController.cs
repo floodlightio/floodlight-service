@@ -39,12 +39,11 @@ namespace Floodlight.Service.Controllers {
             }
         }
 
-        [HttpGet ("")]
-        public string Index()
-        {
-            return "Please work oh god please";
-        }
-
+        /// <summary>
+        /// Gets details about the requested user.
+        /// </summary>
+        /// <param name="uid">User ID to get details for</param>
+        /// <returns>A JSON representation of the user's information.</returns>
         [HttpGet("user/{uid}")]
         public async Task<string> UserDetails(string uid)
         {
@@ -61,6 +60,11 @@ namespace Floodlight.Service.Controllers {
             return "";
         }
         
+        /// <summary>
+        /// Get a list of the user's backgrounds.
+        /// </summary>
+        /// <param name="uid">The User ID to get backrgounds for.</param>
+        /// <returns>A JSON representation of all the user's backgrounds.</returns>
         [HttpGet("user/{uid}/backgrounds")]
         public IEnumerable<Background> Backgrounds(string uid)
         {
@@ -70,6 +74,11 @@ namespace Floodlight.Service.Controllers {
             //return DbContext.Backgrounds.Where(bg => bg.User.Id == uid).Select(bg => bg.ToViewModel());
         }
         
+        /// <summary>
+        /// Get a single background's metadata.
+        /// </summary>
+        /// <param name="bgid">The Background ID to search for.</param>
+        /// <returns>Metadata about the background, including content type.</returns>
         [HttpGet("background/{bgid}")]
         public Background Background(string bgid)
         {            
@@ -79,6 +88,12 @@ namespace Floodlight.Service.Controllers {
             //return _dbContext.Backgrounds.FirstOrDefault(bg => bg.Id.ToString() == bgid).Select(bg => bg.ToViewModel());
         }
 
+        /// <summary>
+        /// Get the image associated with the background, as stored on the server.
+        /// </summary>
+        /// <param name="bgid">The Background ID to get the image for.</param>
+        /// <returns>The image with no extension but correct content type.</returns>
+        /// <remarks>A client should use the ContentType attribute on /backgrounds/{bgid} to construct the final file with extension.</remarks>
         [HttpGet("background/{bgid}/image")]
         public FileResult Image(string bgid)
         {

@@ -56,6 +56,8 @@ namespace Floodlight.Service
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -100,6 +102,9 @@ namespace Floodlight.Service
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseSwaggerGen("api/{apiVersion}/schema.json");
+            app.UseSwaggerUi("api", "/api/v1/schema.json");
         }
 
         // Entry point for the application.

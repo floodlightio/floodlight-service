@@ -2,7 +2,8 @@
   "version": "1.0.0-*",
   "userSecretsId": "aspnet5-Floodlight.Service-6a49eb44-3250-4f19-9ed7-3b8df96ebe18",
   "compilationOptions": {
-    "emitEntryPoint": true
+    "emitEntryPoint": true,
+    "xmlDoc": true
   },
   "tooling": {
     "defaultNamespace": "Floodlight.Service"
@@ -29,7 +30,8 @@
     "Microsoft.Extensions.Logging": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Console": "1.0.0-rc1-final",
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
-    "System.Net.Http": "4.0.1-beta-23516"
+    "System.Net.Http": "4.0.1-beta-23516",
+    "Swashbuckle": "6.0.0-rc1-final"
   },
 
   "commands": {
