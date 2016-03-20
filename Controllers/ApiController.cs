@@ -16,7 +16,8 @@ namespace Floodlight.Service.Controllers {
                     { "0d8cdf96-9504-4aa5-8a0f-42aef4cfa282", "http://i.imgur.com/5u3FHii.jpg" },
                     { "10b92684-69d2-4ded-a3b9-e121b44aac63", "http://i.imgur.com/zAB9nE7.jpg" },
                     { "efa3c8a2-2830-43d9-bdc2-897cf59c644d", "http://i.imgur.com/BT20rKV.jpg" },
-                    { "a17ebb19-adeb-44ba-ae27-119e0bab4f9a", "http://i.imgur.com/D6nRZhH.jpg" }
+                    { "a17ebb19-adeb-44ba-ae27-119e0bab4f9a", "http://i.imgur.com/D6nRZhH.jpg" },
+                    { "35198e49-1a32-4de6-b75a-9b3f82130995", "http://i.imgur.com/dntWXbq.jpg" }
                 };
         
         private Dictionary<string, Background> TestBackgrounds = new Dictionary<string, Background>();
