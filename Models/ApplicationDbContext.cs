@@ -19,6 +19,11 @@ namespace Floodlight.Service.Models
                 .Entity<DbBackground>()
                 .HasIndex(b => b.Id)
                 .IsUnique(true);
+                
+            builder
+                .Entity<ApplicationUser>()
+                .HasIndex(b => b.Guid)
+                .IsUnique(true);
         }
     }
 }
